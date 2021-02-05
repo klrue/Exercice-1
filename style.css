@@ -1,0 +1,111 @@
+/*-----------------------------
+variables
+------------------------------*/
+/*-----------------------------
+mixins
+------------------------------*/
+/*-----------------------------
+layout
+------------------------------*/
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh;
+  background-color: orange;
+  height: 100vh;
+  width: 100vw;
+}
+
+body::after {
+  content: "";
+  clip-path: polygon(0 0, 80% 0, 60% 100%, 0 100%);
+  background-color: blue;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bloc {
+  border: 1px solid #666;
+  background-color: transparent;
+  color: wheat;
+  font-size: 3rem;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px solid;
+}
+
+.grille {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
+}
+
+.entete {
+  font-size: 5rem;
+  border: none;
+  grid-area: entete;
+}
+
+.entete h4 {
+  font-size: 1rem;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.annonce1 {
+  grid-area: annonce1;
+  background-color: #efebc5;
+  color: #5e6e81;
+  border-radius: 10px;
+  box-shadow: 7px 3px 11px 4px #757472;
+  padding: 42px;
+  margin: 20px;
+}
+
+.annonce1 div {
+  padding: 5px;
+  font-size: .5em;
+  display: flex;
+  align-items: center;
+}
+
+.annonce1 div img {
+  width: 100px;
+  height: 100px;
+  padding-right: 5px;
+}
+
+.annonce1:hover {
+  background-color: wheat;
+}
+
+.principal {
+  display: grid;
+  place-items: center;
+  grid-area: principal;
+}
+
+.pied-page {
+  grid-area: pied-page;
+  color: black;
+  background-color: #efebc5;
+  border-radius: 10px;
+  height: 150px;
+}
+/*# sourceMappingURL=style.css.map */
