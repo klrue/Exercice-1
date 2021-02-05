@@ -52,7 +52,15 @@ body::after
 
 .entete
 {
+    font-size: 5rem;
+    border: none;
     grid-area: entete;
+
+    h4{
+        font-size: 1rem;
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
 }
 
 .menu
@@ -83,6 +91,11 @@ body::after
     }
 }
 
+.annonce1:hover
+{
+    background-color:wheat;
+}
+
 .principal
 {
     display: grid;
@@ -94,7 +107,8 @@ body::after
 .pied-page
 {
     grid-area: pied-page;
-    background-color: wheat;
+    color:black;
+    background-color:#efebc5;
     border-radius: 10px;
     height:150px;
 }
