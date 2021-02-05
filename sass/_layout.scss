@@ -47,11 +47,61 @@ body::after
     "entete entete entete"
     "menu menu menu"
     "principal annonce1 annonce1"
-    "pied-page pied-page pied-page"
+    "pied-page pied-page pied-page";
+    @include desktop
+    {
+        grid-template-areas: 
+        "entete entete entete"
+        "menu menu menu"
+        "principal annonce1 annonce1"
+        "pied-page pied-page pied-page";;
+    }
 }
 
 .entete
 {
+    grid-area: entete;
+}
+
+.menu
+{
+    grid-area: menu;
+}
+
+.annonce1
+{
+    grid-area: annonce1;
+}
+
+.principal
+{
+    grid-area: principal;
+}
+
+.pied-page
+{
+    grid-area: pied-page;
+}
+
+
+//--------------------------------------------------------------------------------------------//
+
+.entete
+{
+    display: flex;
+    flex-direction: row;
+    section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        div{
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background-color: rgb(58,48,209);
+        }
+    }
     font-size: 5rem;
     border: none;
     grid-area: entete;

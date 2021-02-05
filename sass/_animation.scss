@@ -1,0 +1,20 @@
+.animation div {
+    animation: anim-entete 1s both cubic-bezier(0,1.19,.31,1.23);
+}
+
+@keyframes anim-entete{
+    0% {
+        transform:translateX(500px);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+
+$columns:5;
+@for $i from 1 through $columns{
+    .animation div:nth-of-type(#{$i})
+    {
+        animation-delay:($i);
+    }
+}
