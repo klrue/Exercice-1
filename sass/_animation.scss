@@ -31,7 +31,7 @@ $columns:5;
 /*--------------------------------------------------------------------------------
 Animation de la section .principal
 ---------------------------------------------------------------------------------*/
-
+@include desktop{
 .principal h3:nth-of-type(1)
 {
 animation: anim-1 1s .5s both;
@@ -65,4 +65,5 @@ animation: anim-3 1s .5s both;
 @keyframes anim-3 {
     0%{transform: translateY(500px);}
     100%{transform: translate(0);}
+}
 }
